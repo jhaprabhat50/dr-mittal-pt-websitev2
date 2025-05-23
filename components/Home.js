@@ -52,12 +52,25 @@ const Home = () => {
         <section className="px-6 py-12 bg-blue-100">
           <h2 className="text-3xl font-semibold text-center mb-8">Areas of Specialization</h2>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {["Orthopaedic Rehabilitation","Neurological Rehabilitation","Geriatric Rehabilitation","Cardiac Rehabilitation","Post-Surgical Care","Sports Injuries","Pain Management","Osteopathy","Pilates","Dry Needling","Ergonomics","Biomechanical Correction"].map(service => (
+            {[
+              "Orthopaedic Rehabilitation",
+              "Neurological Rehabilitation",
+              "Geriatric Rehabilitation",
+              "Cardiac Rehabilitation",
+              "Post-Surgical Care",
+              "Sports Injuries",
+              "Pain Management",
+              "Osteopathy",
+              "Pilates",
+              "Dry Needling",
+              "Ergonomics",
+              "Biomechanical Correction"
+            ].map(service => (
               <Card key={service} className="hover:shadow-xl transition-all">
-                <CardContent className="p-4">
+                <div className="p-4">
                   <h3 className="text-lg font-medium mb-2">{service}</h3>
                   <p className="text-sm text-gray-600">Professional and personalized treatment plans for effective recovery.</p>
-                </CardContent>
+                </div>
               </Card>
             ))}
           </div>
@@ -84,11 +97,11 @@ const Home = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[1, 2, 3].map((id) => (
               <Card key={id} className="hover:shadow-xl transition-all">
-                <CardContent className="p-4">
+                <div className="p-4">
                   <h3 className="text-xl font-medium mb-2">Blog Title {id}</h3>
                   <p className="text-sm text-gray-600 mb-2">Brief summary of the blog post. Helpful tips, recovery stories or health awareness.</p>
                   <Button variant="outline">Read More</Button>
-                </CardContent>
+                </div>
               </Card>
             ))}
           </div>
@@ -139,4 +152,3 @@ const Home = () => {
 };
 
 export default Home;
-
